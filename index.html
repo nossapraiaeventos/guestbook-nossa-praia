@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guestbook Digital - Nossa Praia Eventos</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">Nossa Praia Eventos</div>
+      <h1>Deixe uma mensagem especial 💌</h1>
+      <p>
+        Grave uma lembrança para os noivos/aniversariante. Pode ser texto, foto, áudio ou vídeo.
+      </p>
+    </section>
+
+    <section class="card">
+      <form id="guestbookForm">
+        <label>
+          Seu nome
+          <input type="text" id="name" name="name" placeholder="Ex: Ana e Pedro" required />
+        </label>
+
+        <label>
+          Mensagem
+          <textarea id="message" name="message" rows="5" placeholder="Escreva seu recado..." required></textarea>
+        </label>
+
+        <label>
+          Enviar foto, áudio ou vídeo
+          <input type="file" id="media" name="media" accept="image/*,video/*,audio/*" />
+          <small>Para vídeo, recomendamos até 30 segundos.</small>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" id="permission" required />
+          Autorizo o envio deste recado para o anfitrião do evento.
+        </label>
+
+        <button type="submit">Enviar recado</button>
+      </form>
+
+      <div id="success" class="success hidden">
+        <h2>Recado enviado! 🌊</h2>
+        <p>Obrigado por fazer parte dessa lembrança especial.</p>
+      </div>
+    </section>
+
+    <section class="whatsapp-card">
+      <h2>Preferir enviar pelo WhatsApp?</h2>
+      <p>Clique no botão abaixo e envie vídeo, áudio ou mensagem direto para a Nossa Praia Eventos.</p>
+      <a class="whatsapp" id="whatsappBtn" href="#" target="_blank">Enviar pelo WhatsApp</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
