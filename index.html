@@ -2,59 +2,71 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guestbook Digital - Nossa Praia Eventos</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa Praia Moments</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="page">
+  <main class="app">
     <section class="hero">
-      <div class="badge">Nossa Praia Eventos</div>
-      <h1>Deixe uma mensagem especial 💌</h1>
-      <p>
-        Grave uma lembrança para os noivos/aniversariante. Pode ser texto, foto, áudio ou vídeo.
-      </p>
+      <div class="brand">Nossa Praia Eventos</div>
+      <h1>Momentos que viram lembrança 🌊</h1>
+      <p>Escaneie o QR Code, deixe seu recado e participe do livro digital do evento.</p>
+      <a href="#guestbook" class="primary-btn">Deixar recado</a>
     </section>
 
-    <section class="card">
+    <section class="event-card">
+      <p class="label">Evento</p>
+      <h2>Casamento Ana & Pedro</h2>
+      <p class="date">20 de Setembro de 2026</p>
+    </section>
+
+    <section class="options">
+      <article><span>💌</span><h3>Mensagem</h3><p>Escreva um recado especial.</p></article>
+      <article><span>🎥</span><h3>Vídeo</h3><p>Envie um vídeo curto direto do celular.</p></article>
+      <article><span>🎙️</span><h3>Áudio</h3><p>Deixe uma mensagem de voz emocionante.</p></article>
+    </section>
+
+    <section id="guestbook" class="form-card">
+      <h2>Deixe seu recado</h2>
+      <p class="sub">Seu carinho fará parte do Guestbook Digital do evento.</p>
+
       <form id="guestbookForm">
-        <label>
-          Seu nome
-          <input type="text" id="name" name="name" placeholder="Ex: Ana e Pedro" required />
+        <label>Seu nome
+          <input type="text" id="name" required placeholder="Ex: Maria Silva" />
         </label>
 
-        <label>
-          Mensagem
-          <textarea id="message" name="message" rows="5" placeholder="Escreva seu recado..." required></textarea>
+        <label>Recado
+          <textarea id="message" rows="5" required placeholder="Escreva sua mensagem..."></textarea>
         </label>
 
-        <label>
-          Enviar foto, áudio ou vídeo
-          <input type="file" id="media" name="media" accept="image/*,video/*,audio/*" />
-          <small>Para vídeo, recomendamos até 30 segundos.</small>
+        <label>Foto, áudio ou vídeo
+          <input type="file" id="media" accept="image/*,video/*,audio/*" />
+          <small>Vídeos curtos funcionam melhor. Sugestão: até 30 segundos.</small>
         </label>
 
         <label class="check">
-          <input type="checkbox" id="permission" required />
-          Autorizo o envio deste recado para o anfitrião do evento.
+          <input type="checkbox" required />
+          Autorizo o envio deste recado para os anfitriões do evento.
         </label>
 
         <button type="submit">Enviar recado</button>
       </form>
 
       <div id="success" class="success hidden">
-        <h2>Recado enviado! 🌊</h2>
-        <p>Obrigado por fazer parte dessa lembrança especial.</p>
+        <h2>Recado recebido! 💙</h2>
+        <p>Obrigado por fazer parte desse momento.</p>
       </div>
     </section>
 
     <section class="whatsapp-card">
-      <h2>Preferir enviar pelo WhatsApp?</h2>
-      <p>Clique no botão abaixo e envie vídeo, áudio ou mensagem direto para a Nossa Praia Eventos.</p>
-      <a class="whatsapp" id="whatsappBtn" href="#" target="_blank">Enviar pelo WhatsApp</a>
+      <h2>Quer mandar pelo WhatsApp?</h2>
+      <p>Também dá para enviar vídeo, áudio ou mensagem direto pelo WhatsApp da Nossa Praia.</p>
+      <a id="whatsappBtn" class="whatsapp" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
     </section>
-  </main>
 
+    <footer>Nossa Praia Eventos — porque fazer seu evento inesquecível é nossa praia.</footer>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
